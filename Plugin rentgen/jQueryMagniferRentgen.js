@@ -3,9 +3,9 @@ $.fn.magniferRentgen = function() {
 	return this.each(function() {
 
 		var th        = $(this),
-		dataImage     = th.data("image"),
-		dataImageZoom = th.data("image-zoom"),
-		dataSize      = th.data("size");
+			dataImage     = th.data("image"),
+			dataImageZoom = th.data("image-zoom"),
+			dataSize      = th.data("size");
 		
 		th
 			.addclass("magniferRentgen")

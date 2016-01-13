@@ -1,5 +1,5 @@
 $(function() {
 
-	$(".test-plugin").magniferRentgen();
+	$(".test-plugin").magnifierRentgen();
 
 })
