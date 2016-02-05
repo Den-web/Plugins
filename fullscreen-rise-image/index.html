@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Полноэкранное увеличение изображений на CSS3 | Демонстрация для сайта RUDEBOX</title>
+        <meta name="description" content="A javascript library for viewing images in a fully full screen.">
+        	<script type="text/javascript" src="http://www.rudebox.org.ua/js/jquery.js"></script>
+        <link media="screen" href="demo/styles/demo.css" type="text/css" rel="stylesheet" />
+        <!-- CSS -->
+        <link href='./css/styles.css' rel='stylesheet'>
+
+        <!-- JS -->
+        <script src='intense.js'></script>
+
+        <!-- FONTS -->
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+	<!-- Используется только для демонстрации -->
+<div id="controls">
+<div align=right><a class="close" title="Закрыть" onclick="document.getElementById('controls').style.display='none';">X</a></div>
+   <!-- Яндекс.Директ -->
+<div id="yandex_ad"></div>
+<script type="text/javascript">
+(function(w, d, n, s, t) {
+    w[n] = w[n] || [];
+    w[n].push(function() {
+        Ya.Direct.insertInto(84098, "yandex_ad", {
+            ad_format: "direct",
+            type: "240x400",
+            border_type: "block",
+            border_radius: true,
+            site_bg_color: "FFFFFF",
+            header_bg_color: "FEEAC7",
+            bg_color: "FFF9F0",
+            border_color: "FBE5C0",
+            title_color: "0000CC",
+            url_color: "006600",
+            text_color: "000000",
+            hover_color: "0066FF",
+            favicon: true,
+            no_sitelinks: false
+        });
+    });
+    t = d.getElementsByTagName("script")[0];
+    s = d.createElement("script");
+    s.src = "//an.yandex.ru/system/context.js";
+    s.type = "text/javascript";
+    s.async = true;
+    t.parentNode.insertBefore(s, t);
+})(window, document, "yandex_context_callbacks");
+</script>
+</div>
+<table cellpadding="0" cellspacing="0" id="demo_navi">
+  <tr>
+    <td width="220"><a href="/ " rel="nofollow" ><div class="logo"><b><font color=#c3e425>RUDE</font>BOX</b></div></a></td><td width="45"><div class="demo">DEMO</div></td>
+	<td style="text-overflow: ellipsis;"><a href="/fullscreen-rise-image" class="go-bottom" rel="nofollow" ><div class="name">Полноэкранное увеличение изображений на CSS3</div></a></td>
+  </tr>
+</table>
+<!-- Конец кода используемого для демонстрации -->
+<br><br><br><br><br><br>
+    	<section class="demos">
+    		<!-- Using divs for the demo, for formatting... you can use images if you want!  -->
+    		<div class="demo-image first" data-image="./img/h1_small.jpg" data-title="Красивые поля" data-caption="Поля засажены большим количством пшеницы."></div>
+    		<div class="demo-image second" data-image="./img/v1_small.jpg" data-title="Фантастические горы" data-caption="Тоска по экспедициям. Исследуйте скорее новые высоты!"></div>
+    		<div class="demo-image third"  data-image="./img/h2_small.jpg" data-title="Стадо овец" data-caption="С шерсти этих овечек делают отменные зимние вещи!"></div>
+    	</section>
+
+		<script>
+			var elements = document.querySelectorAll( '.demo-image' );
+			Intense( elements );
+		</script>
+    </body>
+</html>
