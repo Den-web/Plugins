@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<title>Как создать круговую панораму на сайте на JS | Демонстрация для сайта RUDEBOX</title>
+		<script type="text/javascript" src="jquery-1.11.2.min.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="easing.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="jquery.isAlive.min.js" charset="UTF-8"></script>
+	    <link media="screen" href="demo/styles/demo.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript">
+		var animations = {
+			1:{
+				"selector": "#scroll-bar",
+				"method":"static",
+				"property":"width",
+				"value":"eval(elementWidth-20)"
+			},
+			2: {
+				"selector": "#myDiv",
+				"method":"animate",
+				"property":"background-position",
+				"step-start":0,
+				"step-end":100,
+				"value-start":"0px center",
+				"value-end":function(e,d){
+					var t = -9122+d.elementWidth;
+					return t.toString()+"px center";
+				}
+			},
+			3: {
+				"selector": "#scroll-bar-handler",
+				"method":"animate",
+				"property":"left",
+				"value-start":2,
+				"value-end":"eval(elementWidth-20-37)",
+				"scrollbar":true
+			},
+		};
+
+		$(window).load(function(){
+			$('#scroll-over-me').isAlive('create',{
+				elements:animations,
+				duration:500,
+				easing:"easeOutQuad",
+				enableScrollbarTouch:true,
+				useCSS3:true,
+				enableGPU:true,
+				maxScroll:10,
+				onLoadingComplete:function(){
+					$('#myDiv').fadeIn();
+				}
+			});
+		});
+				
+		</script>
+	
+		
+	</head>
+	
+		<style>
+			body,html{
+				overflow:hidden;
+				margin:0;
+			}
+			#scroll-over-me{
+				width:100%;
+				height:100%;
+				background:black;
+				position:relative;
+				margin:auto;
+				
+			}
+			#myDiv{
+				width:100%;
+				height:100%;
+				display:none;
+				background-image:url(assets/360.jpg);
+				background-position: left center;
+				background-repeat: no-repeat;
+				background-size:9122px auto;
+				position:absolute;
+				top:0px;
+				left:0px;
+			}
+			#scroll-bar{
+				position:absolute;
+				width:100px;
+				height:40px;
+				border:1px solid gray;
+				bottom:20px;
+				left:10px;
+				border-radius:20px;
+			}
+			
+			#scroll-bar-handler{
+				position:absolute;
+				width:34px;
+				height:34px;
+				border:1px solid red;
+				top:2px;
+				left:2px;
+				border-radius:100%;
+				background:#ccc;
+				cursor:pointer;
+			}
+		</style>
+	
+	<body>
+	<!-- Используется только для демонстрации -->
+<div id="controls">
+<div align=right><a class="close" title="Закрыть" onclick="document.getElementById('controls').style.display='none';">X</a></div>
+   <!-- Яндекс.Директ -->
+<div id="yandex_ad"></div>
+<script type="text/javascript">
+(function(w, d, n, s, t) {
+    w[n] = w[n] || [];
+    w[n].push(function() {
+        Ya.Direct.insertInto(84098, "yandex_ad", {
+            ad_format: "direct",
+            type: "240x400",
+            border_type: "block",
+            border_radius: true,
+            site_bg_color: "FFFFFF",
+            header_bg_color: "FEEAC7",
+            bg_color: "FFF9F0",
+            border_color: "FBE5C0",
+            title_color: "0000CC",
+            url_color: "006600",
+            text_color: "000000",
+            hover_color: "0066FF",
+            favicon: true,
+            no_sitelinks: false
+        });
+    });
+    t = d.getElementsByTagName("script")[0];
+    s = d.createElement("script");
+    s.src = "//an.yandex.ru/system/context.js";
+    s.type = "text/javascript";
+    s.async = true;
+    t.parentNode.insertBefore(s, t);
+})(window, document, "yandex_context_callbacks");
+</script>
+</div>
+<table cellpadding="0" cellspacing="0" id="demo_navi">
+  <tr>
+    <td width="220"><a href="/ " rel="nofollow" ><div class="logo"><b><font color=#c3e425>RUDE</font>BOX</b></div></a></td><td width="45"><div class="demo">DEMO</div></td>
+	<td style="text-overflow: ellipsis;"><a href="/jqueryisalive-animation-panorame" class="go-bottom" rel="nofollow" ><div class="name">Как создать круговую панораму на сайте на JS</div></a></td>
+  </tr>
+</table>
+		<div id="scroll-over-me">
+			<div id="myDiv"></div>
+			<div id="scroll-bar">
+				<div id="scroll-bar-handler"></div>
+			</div>
+		</div>
+	</body>
+</html>
