@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Эффект размытого фона для соц. закладок | Демонстрация для сайта RUDEBOX</title>
+	<meta name="description" content="Social sharing and listing social accounts jquery plugin">
+	<link rel="stylesheet" href="assets/stylesheets/normalize.css">
+	<link rel="stylesheet" href="assets/stylesheets/example.css">
+	<link rel="stylesheet" href="assets/stylesheets/arthref.css">
+	<link rel="stylesheet" href="demo.css">
+	  <link media="screen" href="demo/styles/demo.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+<div id="demo_navi">
+      <a href="http://www.rudebox.org.ua/ " rel="nofollow" ><div class="logo"><b><font color=#c3e425>RUDE</font>BOX</b></div></a>
+      <div class="demo">DEMO</div>
+      <a href="http://www.rudebox.org.ua/blur-background-social-share-plugin" rel="nofollow" ><div class="name">Эффект размытого фона для соц. закладок </div></a>
+    </div>
+<div class="container">
+
+<br>	<br>	<br>	<br>	<br>	<br>	<br>	
+	<p class="navigation">
+		<a href="#" class="nav followSelector">Поделиться!</a>
+	</p>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="assets/javascripts/socialShare.js"></script>
+<script src="assets/javascripts/socialProfiles.js"></script>
+<script>
+	$(document).ready(function () {
+
+		$('.shareSelector').socialShare({
+			social: 'facebook,twitter,google,pinterest,stumbleupon,delicious,friendfeed,digg,linkedin',
+			whenSelect: true,
+			selectContainer: '.shareSelector',
+			blur: true
+		});
+
+		$('.followSelector').socialProfiles({
+			animation: 'chain',
+			blur: true,
+			facebook: 'tolgaergin',
+			google: '102336483082058519992',
+			twitter: 'tolgaergin',
+			pinterest: 'tolga',
+			dribbble: 'bbb',
+			behance: 'gokhun',
+			scoutzie: 'gokhun-guneyhan'
+		});
+	});
+</script>
+
+</body>
+</html>
