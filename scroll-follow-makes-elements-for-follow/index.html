@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+ <head>
+
+    <title>Заставляем элементы следовать за прокруткой страницы | Демонстрация для сайта RUDEBOX</title>
+    <link media="screen" href="demo/styles/demo.css" type="text/css" rel="stylesheet" />
+
+	<link rel="stylesheet" href="css/website.css" type="text/css" media="screen"/>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/ui.core.js"></script>
+   	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+   	<script type="text/javascript" src="js/jquery.scroll-follow.js"></script>	
+	<script type="text/javascript">
+   		$( document ).ready( function ()
+			{
+				$( '#followblock' ).scrollFollow(
+					{
+						speed: 1000,
+						offset: 60,
+						killSwitch: 'offLink',
+						onText: 'Не преследуй меня!',
+						offText: 'Давай за мной!'
+					}
+				);
+			}
+		);
+   	</script>
+
+  </head>
+  <body style="height: 2000px;">
+   <div id="demo_navi">
+      <a href="http://www.rudebox.org.ua/ " rel="nofollow" ><div class="logo"><b><font color=#c3e425>RUDE</font>BOX</b></div></a>
+      <div class="demo">DEMO</div>
+      <a href="http://www.rudebox.org.ua/scroll-follow-makes-elements-for-follow" rel="nofollow" ><div class="name">Заставляем элементы следовать за прокруткой страницы</div></a>
+    </div>
+
+    <div id="content" style="height: 100%;">
+
+<div id="followblock" style="top: 0px; "><center style="font-family: Georgia; font-size: 17px;"><i><b>Все для веб-дизайнера</b></i></center><br>
+<span class="blocktext">Информационный блог, в котором публикуются новости веб-дизайна, а так же информация и советы по созданию сайтов, шаблонов,и многое другое интересное с интернет мира. На нашем сайте вы можете найти еще достаточно много полезной информации по созданию сайтов и различных материалов для веб-дизайна и вдохновения!<br><br>
+<a id="offLink">Не преследуй меня!</a>
+</div>	
+
+    </div>
+  </body>
