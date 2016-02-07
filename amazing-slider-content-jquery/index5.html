@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Удивительный слайдер контента с помощью jQuery | Демонстрация для сайта RUDEBOX</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/iview.css" />
+		<link rel="stylesheet" href="css/skin 5/style.css" />
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/raphael-min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.js"></script>
+		
+		<script src="js/iview.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#iview').iView({
+					strips: 20,
+					blockCols: 20,
+					blockRows: 3,
+					pauseTime: 7000,
+					pauseOnHover: true,
+					directionNavHoverOpacity: 0,
+					timer: "Bar",
+					timerDiameter: 120,
+					timerPadding: 3,
+					timerStroke: 4,
+					timerBarStroke: 0,
+					timerColor: "#0F0",
+					timerPosition: "bottom-right"
+				});
+				$('#iview2').iView({
+					pauseTime: 5000,
+					pauseOnHover: true,
+					directionNavHoverOpacity: 0,
+					controlNav: true,
+					controlNavNextPrev: false,
+					controlNavTooltip: false,
+					timer: "360Bar",
+					timerDiameter: 30,
+					timerPadding: 3,
+					timerStroke: 4,
+					timerBarStroke: 0,
+					timerColor: "#0F0",
+					timerPosition: "top-right"
+				});
+			});
+		</script>	<link rel="stylesheet" href="demo.css?v=2">
+	<link media="screen" href="demo/styles/demo.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	
+	<div id="demo_navi">
+      <a href="http://www.rudebox.org.ua/ " rel="nofollow" ><div class="logo"><b><font color=#c3e425>RUDE</font>BOX</b></div></a>
+      <div class="demo">DEMO</div>
+     <a href="http://www.rudebox.org.ua/amazing-slider-content-jquery" rel="nofollow" ><div class="name">Удивительный слайдер контента с помощью jQuery</div></a>
+    </div>
+<div id="cont">
+		<div id="header">
+			<div class="container">
+				<h1><a href="<?=$siteurl?>">iView&trade;</a></h1>
+      
+				<div id="nav">
+					<ul>
+						<li><a href="index.html">Regular</a></li>
+						<li><a href="index2.html">Multiple</a></li>
+						<li><a href="index3.html">Regular with API</a></li>
+						<li><a href="index4.html">Responsive</a></li>
+						<li class="active"><a href="index5.html">Banner</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	<div class="container">
+		<div id="iview" class="iview">
+			<div data-iview:image="photos/728x90_1.jpg"></div>
+			<div data-iview:image="photos/728x90_2.jpg"></div>
+			<div data-iview:image="photos/728x90_3.jpg"></div>
+		</div>
+		
+		<div id="iview2" class="iview">
+			<div data-iview:image="photos/300x600_1.jpg"></div>
+			<div data-iview:image="photos/300x600_2.jpg"></div>
+			<div data-iview:image="photos/300x600_3.jpg"></div>
+		</div>
+	</div>
+
+<center>
+<a rel="nofollow" class="otherbuttons small greenotherb" href="index.html">Пример 1</a>
+<a rel="nofollow" class="otherbuttons small greenotherb" href="index2.html">Пример 2</a>
+<a rel="nofollow" class="otherbuttons small greenotherb" href="index3.html">Пример 3</a>
+<a rel="nofollow" class="otherbuttons small greenotherb" href="index4.html">Пример 4</a>
+<a rel="nofollow" class="otherbuttons small greenotherb" href="index5.html">Пример 5</a>
+</center>
+	<div class="copy">Создал <a href="http://iprodev.com/" rel="nofollow" >Hemn Chawroka</a>.<br>Copyright &copy 2012. All rights reserved.
+
+<script type="text/javascript" src="js/jquery.fullscreen.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("#background-image").fullscreenBackground();
+	});
+</script>
+
+	</body>
+</html>
